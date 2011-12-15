@@ -41,14 +41,13 @@ int main() {
 #ifdef DEBUG       
     cvShowImage( "result", frame );
     cvWaitKey(100);
-#endif
     printf("found %d faces\n", res);
+#endif
   stop_camera();
   cvReleaseImage(&frame);
-
-    if(res > 0) {
+  if(res > 0) {
       system("qdbus org.gnome.ScreenSaver / org.gnome.ScreenSaver.SimulateUserActivity");
-    }
+  }
     //    sleep(5);
   }
   dbus_connection_close(conn);

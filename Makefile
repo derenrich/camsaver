@@ -7,3 +7,7 @@ camsaver:
 	$(CC) $(LIBS) $(CFLAGS) camera.c camsaver.c -o camsaver
 debug:
 	$(CC) $(LIBS) $(CFLAGS) -DDEBUG camera.c camsaver.c -o camsaver
+
+.PHONY: clean
+clean:
+	rm -f camsaver
